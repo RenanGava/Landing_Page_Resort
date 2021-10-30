@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+/**Divs gerais*/
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.clear{
+    clear: both;
+}
+
+/********/
+
+header{
+    background-color: #aabfbb;
+    padding: 10px  2% 25px 2%; 
+}
+
+.logo-1{
+    float: left;
+    width: 150px;
+    height: 60px;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/logo1.png);
+}
+
+.logo-2{
+    float: right;
+    width: 150px;
+    height: 60px;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/logo2.png);
+}
+
+.cover-form{
+    width: 100%;
+}
+
+.bg{
+    position: relative;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/bg-form.jpg);
+}
+
+
+.form-container{
+    position: absolute;
+    right: 30px;
+    top: -2.5%;
+    margin-right: 40px;
+    width: 400px;
+    height: 105%;
+    background-color: white;
+    box-shadow: 2px 2px 15px 1px;
+}
+
+/* para fazer o formulário foi estilizado utilizando a propriedade position: absolute; */
+
+.form-container h2{
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 25px 15px;
+    color: black;
+    font-size: 18px;
+    background-color: #aabfbb;
+}
+
+.form-container form{
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.form-container  form p{
+    font-size: 13px;
+    color:#525252;
+}
+
+.form-wraper:not(:first-child){
+    /* :not(:first-child) siginifica não aplicar no primerio filho ou elemento
+    fazendo com que todos os filhos depois do primerio recebam o estilo*/
+    margin-top: 20px;
+}
+
+.form-wraper:last-child{
+    /* last-child pega o ultimo filho dentro de um elemento de aplica o estilo
+    somente a ele. */
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-container form input[type=text]{
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 10px;
+}
+
+.form-container form input[type=submit]{
+    background-color: #033c50;
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
+    font-size: 25px;
+    height: 50px;
+    cursor: pointer;
+    border: 0;
+}
+
+.icon-seta{
+    /* posicionamos a seta entre o formulario e a parte de chamada dessa forma */
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-image: url(../images/arrow.png);
+}
+
+section.chamada{
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    
+}
+
+section.chamada div.container{
+    background-color: #e9f5f3;
+    padding: 70px 0 50px 0;
+}
+
+
+section.chamada p{
+    width: 98%;
+    display: inline-block;
+    max-width: 700px;
+    margin-top: 15px;
+    font-size: 22px;
+    color: #808080;
+}
+
+section.chamada h2{
+    width: 98%;
+    max-width: 700px;
+    display: inline-block;
+    color: #4a4a4a;
+    font-size: 30px;
+    text-transform: capitalize; 
+    font-weight: normal;   
+}
+
+/* image */
+.flex-mosaico:nth-child(1) .item-1-mosaico{
+    background-image: url(../images/mosaico1.jpg);
+}
+
+.flex-mosaico:nth-child(2) .item-1-mosaico{
+    background-image: url(../images/mosaico2.jpg);
+}
+
+.flex-mosaico:nth-child(3) .item-1-mosaico{
+    background-image: url(../images/mosaico3.jpg);
+}
+
+.flex-mosaico:nth-child(4) .item-1-mosaico{
+    background-image: url(../images/mosaico4.jpg);
+}
+
+
+/* estilo geral flex-mosaico */
+.flex-mosaico{
+    display: flex;
+}
+
+.item-1-mosaico{
+    background-position: center;
+    background-size: cover;
+    width: 55%;
+}
+
+.item-2-mosaico{
+    width: 45%;
+    margin: 10px;
+    padding: 60px 40px;
+    background-color: #b6e3db;
+}
+
+
+.item-2-mosaico p{
+    color: #969696;
+}
+
+/* flex-direction */
+.flex-mosaico:nth-child(2){
+    flex-direction: row-reverse;
+}
+
+.flex-mosaico:nth-child(4){
+    flex-direction: row-reverse;
+}
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p{
+    margin-top: 8px;
+}
+
+footer img{
+    width: 120px;
+}
+
+
+
+
+/* Responsivo */
+
+
+@media screen  and (max-width: 1024px){
+    .bg{
+        height: auto;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .form-container{
+        height: auto;
+        width: 95%;
+        max-width: 400px;
+        margin: 0 auto;
+        position: static;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .icon-seta{
+        height: 64px;
+        width: 64px;
+        position: absolute;
+        left: 50%;
+        top: 630px;
+        margin-top: 10px;
+        transform: translateX(-50%);
+        background-repeat: no-repeat;
+        background-image: url(../images/arrow.png);
+    }
+}
+
+
+
+@media screen  and (max-width: 960px){
+    .bg{
+        height: auto;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .form-container{
+        height: auto;
+        width: 95%;
+        max-width: 400px;
+        margin: 0 auto;
+        position: static;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .flex-mosaico{
+        display: block;
+        justify-content: center;
+    }
+
+    .item-1-mosaico{
+        width: 100%;
+        padding-top: 80%;
+    }
+
+    .item-2-mosaico{
+        width: 100%;
+        margin: 0;
+        text-align: justify;
+    }
+}
+
+
+@media screen and (max-width: 510px){
+
+    header{
+        text-align: center; 
+    }
+
+    [class^="logo"]{
+        /* esse argumento entre colchetes diz para pegar tudo que comece com logo*/
+        margin-top: 10px;
+        display: inline-block;
+        float: none;
+    }
+
+    /* 
+    isso daqui é a forma normal de escrever a estilização o metodo acima é mais avançado
+    .logo-1, .logo-2{
+        margin-top: 10px;
+        display: inline-block;
+        float: none;
+    } */
+    /* utilizando o metodo inline-block podemos colocar uma div cega no html para que os elementos
+    fiquem um embaixo do outro. */
+
+    .icon-seta{
+        height: 64px;
+        width: 64px;
+        position: absolute;
+        left: 50%;
+        top: 720px; 
+        transform: translateX(-50%);
+        background-repeat: no-repeat;
+        background-image: url(../images/arrow.png);
+    }
+}
